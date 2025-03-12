@@ -117,7 +117,7 @@ export default function ContentList({
       : fallbackItemImage;
     return asImageSrc(image, {
       fit: "crop",
-      w: 220,
+      w: 540,
       h: 320,
       exp: -10,
     });
@@ -170,7 +170,9 @@ export default function ContentList({
 
         {/* Hover element */}
         <div
-          className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[320px] w-[220px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300"
+          className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[320px] w-[520px] rounded-lg bg-cover bg-center opacity-0 transition-[opacity, transform] duration-300 hover:opacity-100 hover:scale-10"
+
+
           style={{
             backgroundImage:
               currentItem !== null ? `url(${contentImages[currentItem]})` : "",
